@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Radioz.iml" filepath="$PROJECT_DIR$/.idea/modules/Radioz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Radioz.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Radioz.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Radioz.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Radioz.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Radioz.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Radioz.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Radioz.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Radioz.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
