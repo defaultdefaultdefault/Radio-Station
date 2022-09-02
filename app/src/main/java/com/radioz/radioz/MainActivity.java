@@ -88,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
                 .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
                 .build());*/
         try {
-            mediaPlayer.setDataSource(this, Uri.parse("http://199.180.75.118:80/stream"));
+            //mediaPlayer.setDataSource(this, Uri.parse("http://199.180.75.118:80/stream"));
+            mediaPlayer.setDataSource(this, Uri.parse("https://radyo.yayin.com.tr:6377"));
             mediaPlayer.prepare();
             button.setText(mediaPlayer.getDuration());
         }catch (Exception exception){
