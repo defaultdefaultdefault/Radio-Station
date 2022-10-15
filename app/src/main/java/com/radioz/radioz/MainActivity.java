@@ -14,13 +14,14 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton facebook, whatsapp, youtube;
+    ImageButton facebook, whatsapp, youtube, tiktok;
 
-    Button button;
+    ImageView button;
     MediaPlayer mediaPlayer;
     Handler handler = new Handler();
 
@@ -37,12 +38,15 @@ public class MainActivity extends AppCompatActivity {
               if(mediaPlayer.isPlaying()){
                   handler.removeCallbacks(updater);
                   mediaPlayer.pause();
-                  button.setText("play");
+                  //button.setText("play");
+                  button.setImageResource(R.drawable.ic_baseline_play_circle_filled_24);
               }
               else {
                   mediaPlayer.start();
-                  button.setText("pause");
-                }
+                 // button.setText("pause");
+                  button.setImageResource(R.drawable.ic_baseline_pause_circle_filled_24);
+
+              }
             }
 
 
@@ -70,6 +74,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        tiktok = (ImageButton) findViewById(R.id.tiktok_button);
+        tiktok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri whatsapp_link = Uri.parse("https://www.tiktok.com/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, whatsapp_link);
+                startActivity(intent);
+            }
+        });
+
         youtube = (ImageButton) findViewById(R.id.youtube_button);
         youtube.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             //mediaPlayer.setDataSource(this, Uri.parse("http://199.180.75.118:80/stream"));
             mediaPlayer.setDataSource(this, Uri.parse("https://radyo.yayin.com.tr:6377"));
             mediaPlayer.prepare();
-            button.setText(mediaPlayer.getDuration());
+           // button.setText(mediaPlayer.getDuration());
         }catch (Exception exception){
             Toast.makeText(this, exception.getMessage(), Toast.LENGTH_SHORT).show();
         }

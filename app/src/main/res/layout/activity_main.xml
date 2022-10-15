@@ -2,41 +2,78 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/frekansz"
+    android:gravity="center"
     android:orientation="vertical"
+
     tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:scaleType="fitStart"
+        android:layout_marginTop="300dp"
+        android:src="@drawable/ic_baseline_play_circle_filled_24" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/tiktok_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/tiktok" />
+
+        <ImageButton
             android:id="@+id/whatsapp_button"
-            android:layout_width="wrap_content"
-            android:layout_height="83dp"
-            android:layout_weight="1"
-            app:srcCompat="@android:drawable/arrow_up_float" />
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/whatsapp" />
 
         <ImageButton
             android:id="@+id/youtube_button"
-            android:layout_width="wrap_content"
-            android:layout_height="83dp"
-            android:layout_weight="1"
-            app:srcCompat="@android:drawable/arrow_up_float" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/youtube"
+            />
 
         <ImageButton
             android:id="@+id/facebook_button"
-            android:layout_width="wrap_content"
-            android:layout_height="83dp"
-            android:layout_weight="1"
-            app:srcCompat="@android:drawable/arrow_up_float" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:scaleType="fitStart"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/facebook"
+            />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/mail" />
+
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
 </LinearLayout>
